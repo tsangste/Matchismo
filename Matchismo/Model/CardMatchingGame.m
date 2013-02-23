@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSMutableArray *cards;
 @property (nonatomic) int score;
+@property (strong, nonatomic) NSString *result;
 
 @end
 
@@ -21,6 +22,12 @@
 {
     if (!_cards) _cards = [[NSMutableArray alloc] init];
     return _cards;
+}
+
+- (NSString *)result
+{
+    if (!_result) _result = [[NSString alloc] init];
+    return _result;
 }
 
 - (id)initWithCardCount:(NSUInteger)count
@@ -57,6 +64,7 @@
 - (void)flipCardAtIndex:(NSUInteger)index
 {
     Card *card = [self cardAtIndex:index];
+    self.result = [NSString stringWithFormat:@"Flipped up %@", card.contents];
     
     if (!card.isUnplayable)
     {
@@ -72,11 +80,13 @@
                         otherCard.unplayable = YES;
                         card.unplayable = YES;
                         self.score += matchScore * MATCH_BONUS;
+                        self.result = [NSString stringWithFormat:@"Matched for %d points", self.score];
                     }
                     else
                     {
                         otherCard.faceUp = NO;
                         self.score -= MISMATCH_PENALTY;
+                        self.result = [NSString stringWithFormat:@"Mismatch! %d point penalty!", self.score];
                     }
                     break;
                 }

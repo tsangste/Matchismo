@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01CD03816D826F800CCAFE0 /* ThreeCardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B01CD03716D826F800CCAFE0 /* ThreeCardMatchingGame.m */; };
+		B01CD03A16D845E400CCAFE0 /* cardimages in Resources */ = {isa = PBXBuildFile; fileRef = B01CD03916D845E400CCAFE0 /* cardimages */; };
 		B0DFC42C16B6420D00FA64AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFC42B16B6420D00FA64AE /* UIKit.framework */; };
 		B0DFC42E16B6420D00FA64AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFC42D16B6420D00FA64AE /* Foundation.framework */; };
 		B0DFC43016B6420D00FA64AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DFC42F16B6420D00FA64AE /* CoreGraphics.framework */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B01CD03616D826F800CCAFE0 /* ThreeCardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThreeCardMatchingGame.h; path = Model/ThreeCardMatchingGame.h; sourceTree = "<group>"; };
+		B01CD03716D826F800CCAFE0 /* ThreeCardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ThreeCardMatchingGame.m; path = Model/ThreeCardMatchingGame.m; sourceTree = "<group>"; };
+		B01CD03916D845E400CCAFE0 /* cardimages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = cardimages; sourceTree = "<group>"; };
 		B0DFC42716B6420D00FA64AE /* Matchismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matchismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DFC42B16B6420D00FA64AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0DFC42D16B6420D00FA64AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -110,6 +115,7 @@
 		B0DFC43216B6420D00FA64AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B01CD03916D845E400CCAFE0 /* cardimages */,
 				B0DFC43A16B6420D00FA64AE /* CardGameAppDelegate.h */,
 				B0DFC43B16B6420D00FA64AE /* CardGameAppDelegate.m */,
 				B0DFC43316B6420D00FA64AE /* Matchismo-Info.plist */,
@@ -136,6 +142,8 @@
 				B0DFC45816B646C500FA64AE /* PlayingCard.m */,
 				B0DFC45A16B646DA00FA64AE /* PlayingCardDeck.h */,
 				B0DFC45B16B646DA00FA64AE /* PlayingCardDeck.m */,
+				B01CD03616D826F800CCAFE0 /* ThreeCardMatchingGame.h */,
+				B01CD03716D826F800CCAFE0 /* ThreeCardMatchingGame.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 				B0DFC44016B6420D00FA64AE /* Default@2x.png in Resources */,
 				B0DFC44216B6420D00FA64AE /* Default-568h@2x.png in Resources */,
 				B0DFC44516B6420D00FA64AE /* MainStoryboard.storyboard in Resources */,
+				B01CD03A16D845E400CCAFE0 /* cardimages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +224,7 @@
 				B0DFC45916B646C500FA64AE /* PlayingCard.m in Sources */,
 				B0DFC45C16B646DA00FA64AE /* PlayingCardDeck.m in Sources */,
 				B0E59BBD16D67213009CA6E8 /* CardMatchingGame.m in Sources */,
+				B01CD03816D826F800CCAFE0 /* ThreeCardMatchingGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
