@@ -50,7 +50,14 @@
                         otherCard.faceUp = NO;
                     }
                     self.score -= MISMATCH_PENALTY;
-                    self.result = [NSString stringWithFormat:@"Mismatch! %d point penalty!", MISMATCH_PENALTY];
+                    self.result = [NSString stringWithFormat:@"%@ & %@ dont match! %d point penalty!", card.contents
+                                                                                                     , [[selectedCards objectAtIndex:0] contents]
+                                                                                                     , MISMATCH_PENALTY];
+                }
+                else
+                {
+                    self.result = [NSString stringWithFormat:@"Matched %@ & %@", card.contents
+                                                                               , [[selectedCards objectAtIndex:0] contents]];
                 }
             }
             else if (2 == [selectedCards count])
@@ -64,7 +71,10 @@
                     }
                     card.unplayable = YES;
                     self.score += matchScore * MATCH_BONUS;
-                    self.result = [NSString stringWithFormat:@"Matched for %d points", matchScore * MATCH_BONUS];
+                    self.result = [NSString stringWithFormat:@"Matched %@ & %@ & %@ for %d points", card.contents
+                                                                                                  , [[selectedCards objectAtIndex:0] contents]
+                                                                                                  , [[selectedCards objectAtIndex:1] contents]
+                                                                                                  , matchScore * MATCH_BONUS];
                 }
                 else
                 {
@@ -73,7 +83,10 @@
                         otherCard.faceUp = NO;
                     }
                     self.score -= MISMATCH_PENALTY;
-                    self.result = [NSString stringWithFormat:@"Mismatch! %d point penalty!", MISMATCH_PENALTY];
+                    self.result = [NSString stringWithFormat:@"%@ & %@ & %@ dont match! %d point penalty!", card.contents
+                                                                                                          , [[selectedCards objectAtIndex:0] contents]
+                                                                                                          , [[selectedCards objectAtIndex:1] contents]
+                                                                                                          , MISMATCH_PENALTY];
                 }
 
             }
