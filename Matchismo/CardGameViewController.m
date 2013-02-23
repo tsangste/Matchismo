@@ -49,7 +49,7 @@
 
 - (void)updateUI
 {
-    UIImage *cardBackImage = [UIImage imageNamed:@"cardimages/card-back.png"];
+    UIImage *cardBackImage = [UIImage imageNamed:@"card-back.png"];
     UIImage *blank = [[UIImage alloc] init];
     
     for (UIButton *cardButton in self.cardButtons)
